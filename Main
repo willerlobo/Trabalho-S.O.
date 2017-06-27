@@ -1,0 +1,16 @@
+public class ProjetoThreads {
+
+   
+    public static void main(String[] args) {
+       
+        Armazem armazem = new Armazem();
+        armazem.setNumero(0);
+        
+        Contador p1 = new Contador(armazem);
+        Impressora I1 = new Impressora(armazem);       
+        Thread t1 = new Thread(p1);
+        Thread t2 = new Thread(I1);
+        t1.start();
+        t2.start();
+        
+ }
